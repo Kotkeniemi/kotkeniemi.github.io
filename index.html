@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<title>Lab 5</title>
-	<script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
 $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
-     $("div").append(field + " ");
+      $.each(result, function(i, field){
+        $("div").append(field + " ");
+      });
     });
   });
 });
 </script>
 </head>
 <body>
+
 <button>Get JSON data</button>
+
 <div></div>
 
 </body>
