@@ -9,14 +9,14 @@ $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
       $.each(result, function(i, field){
-        $(".name").append(field.name + "<br>" );
-        $(".year").append(field.year + "<br>");
-        $(".imageURL").append( field.imageURL + "<br>");
-        $(".type").append( field.engine.type + "<br>");
-        $(".size").append( + field.engine.size + "<br>"); 
-        $(".configuration").append(field.engine.configuration + "<br>");
-        $(".front").append(field.brakes.front + "<br>");
-        $(."back").append + (field.brakes.back + "<br>");
+        $("#name").append(field.name + "<br>" );
+        $("#year").append(field.year + "<br>");
+        $("#imageURL").append( field.imageURL + "<br>");
+        $("#type").append( field.engine.type + "<br>");
+        $("#size").append( + field.engine.size + "<br>"); 
+        $("#configuration").append(field.engine.configuration + "<br>");
+        $("#front").append(field.brakes.front + "<br>");
+        $(#"back").append + (field.brakes.back + "<br>");
       });
     });
   });
@@ -24,7 +24,7 @@ $(document).ready(function(){
 </script>
 
 <style>
-.container1{
+.container{
     border:1px solid blue;
 }
 
@@ -36,17 +36,17 @@ $(document).ready(function(){
 </head>
 <body>
 
-<button>Get JSON data</button>
+<button>Get JSON data!</button>
 
 <div class ="container">
-    <div class ="name"> </div>
-    <div class ="year"> </div>
-    <div class ="imageURL"> </div>
-    <div class ="type"> </div>
-    <div class ="size"> </div>
-    <div class ="configuration"> </div>
-    <div class ="front"> </div>
-    <div class ="back"> </div>
+    <div id ="name"> </div>
+    <div id ="year"> </div>
+    <div id ="imageURL"> </div>
+    <div id ="type"> </div>
+    <div id ="size"> </div>
+    <div id ="configuration"> </div>
+    <div id ="front"> </div>
+    <div id ="back"> </div>
 
 
 </div>
