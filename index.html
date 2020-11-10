@@ -7,14 +7,8 @@ $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
       $.each(result, function(i, field){
-        $("col-1").append(field.name + "<br>" );
-        $("col-2").append(field.year + "<br>");
-        $("col-3").append( field.imageURL + "<br>");
-        $("col-4").append( field.engine.type + "<br>");
-        $("col-5").append( + field.engine.size + "<br>"); 
-        $("col-6").append(field.engine.configuration + "<br>");
-        $("col-7").append(field.brakes.front + "<br>");
-        $("col-8").append + (field.brakes.back + "<br>");
+        $("container-1").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br>" + field.engine.type + "<br>" + field.engine.size + "<br>" + field.engine.configuration + "<br>" + field.brakes.front + "<br>" + field.brakes.back + "<br>");
+    
       });
     });
   });
@@ -26,10 +20,7 @@ $(document).ready(function(){
     border:1px solid blue;
 }
 
-
-
 </style>
-
 
 </head>
 <body>
@@ -37,39 +28,8 @@ $(document).ready(function(){
 <button>Get JSON data</button>
 
 <div class = "container container-1">
-  <div class = "row row1">
-    <div class = "col col-1">
-      
-    </div>
-     <div class = "col col-2">
-      
-    </div>
-     <div class = "col col-3">
-      
-    </div>
-    
-  </div>
-  <div class = "row row2">
-    <div class = "col col-4">
-      
-    </div>
-     <div class = "col col-5">
-      
-    </div>
-     <div class = "col col-6">
-      
-    </div>
-    <div class = "row row3">
-        <div class = "col co-7">
-      
-        </div>
-         <div class = "col col-8">
-          
-        </div>
-    </div>
-  </div>
   
-  
+
 </div>
 
 </body>
