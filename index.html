@@ -2,39 +2,24 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="CSS\about.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <script>
-  
 $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
       $.each(result, function(i, field){
-        $("test").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br>" + field.engine.type + "<br>" + field.engine.size + "<br>" + field.engine.configuration + "<br>" + field.brakes.front + "<br>" + field.brakes.back + "<br>");
-    
+        $("div").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br>" + field.engine.type + "<br>" + field.engine.size + "<br>" + field.engine.configuration + "<br>" + field.brakes.front + "<br>" + field.brakes.back + "<br>");
       });
     });
   });
 });
 </script>
-
-<style>
-.container-1{
-    border:1px solid blue;
-}
-
-</style>
-
 </head>
 <body>
+  <button> Get Json </button>
 
-<button>Get JSON Data!!</button>
-
-<div class = "container container-1">
-<div id = "test">
-     </div>
-
-</div>
-
-</body>
+<div> </div>
+  
+  
+</body
+  
 </html>
