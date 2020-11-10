@@ -7,7 +7,7 @@ $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
       $.each(result, function(i, field){
-        $("div").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br> ");
+        $("div").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br>" + field.engine.type + "<br>");
       });
     });
   });
