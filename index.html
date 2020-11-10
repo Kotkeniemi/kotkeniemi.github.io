@@ -10,7 +10,7 @@ $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
       $.each(result, function(i, field){
-        $("container-1").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br>" + field.engine.type + "<br>" + field.engine.size + "<br>" + field.engine.configuration + "<br>" + field.brakes.front + "<br>" + field.brakes.back + "<br>");
+        $("test").append(field.name + "<br>"  + field.year + "<br> " + field.imageURL + "<br>" + field.engine.type + "<br>" + field.engine.size + "<br>" + field.engine.configuration + "<br>" + field.brakes.front + "<br>" + field.brakes.back + "<br>");
     
       });
     });
@@ -28,10 +28,11 @@ $(document).ready(function(){
 </head>
 <body>
 
-<button>Get JSON data!!</button>
+<button>Get JSON Data!!</button>
 
 <div class = "container container-1">
-  
+<div id = "test"
+     </div>
 
 </div>
 
