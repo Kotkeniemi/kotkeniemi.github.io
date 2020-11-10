@@ -7,52 +7,63 @@ $(document).ready(function(){
   $("button").click(function(){
     $.getJSON("work.js", function(result){
       $.each(result, function(i, field){
-        $("col1").append(field.name + "<br>" );
-        $("col2").append(field.year + "<br>");
-        $("col3").append( field.imageURL + "<br>");
-        $("col4").append( field.engine.type + "<br>");
-        $("col5").append( + field.engine.size + "<br>"); 
-        $("col6").append(field.engine.configuration + "<br>");
-        $("col7").append(field.brakes.front + "<br>");
-        $("col8").append + (field.brakes.back + "<br>");
+        $("col-1").append(field.name + "<br>" );
+        $("col-2").append(field.year + "<br>");
+        $("col-3").append( field.imageURL + "<br>");
+        $("col-4").append( field.engine.type + "<br>");
+        $("col-5").append( + field.engine.size + "<br>"); 
+        $("col-6").append(field.engine.configuration + "<br>");
+        $("col-7").append(field.brakes.front + "<br>");
+        $("col-8").append + (field.brakes.back + "<br>");
       });
     });
   });
 });
 </script>
+
+<style>
+.container1{
+    border:1px solid blue;
+}
+
+
+
+</style>
+
+
 </head>
 <body>
 
 <button>Get JSON data</button>
 
-<div class = "container">
+<div class = "container container-1">
   <div class = "row row1">
-    <div class = "col col1">
+    <div class = "col col-1">
       
     </div>
-     <div class = "col col2">
+     <div class = "col col-2">
       
     </div>
-     <div class = "col col3">
+     <div class = "col col-3">
       
     </div>
     
   </div>
   <div class = "row row2">
-    <div class = "col col4">
+    <div class = "col col-4">
       
     </div>
-     <div class = "col col5">
+     <div class = "col col-5">
       
     </div>
-     <div class = "col col6">
+     <div class = "col col-6">
       
     </div>
     <div class = "row row3">
-        <div class = "col col7">
+        <div class = "col co-7">
       
         </div>
-         <div class = "col col8">
+         <div class = "col col-8">
           
         </div>
     </div>
